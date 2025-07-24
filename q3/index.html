@@ -12,6 +12,7 @@
 <body>
 <div class="page-container">
   <h2>טופס דיווח תקלה בתעלת זמן</h2>
+  <button><a href="view.html">דף דיווחים</a></button>
 <form id="reportform">
 <label for="channel-number">* מספר תעלה:</label><br>
 <!-- field 1 -->
@@ -30,24 +31,24 @@
     <label for="description">תיאור התקלה:</label><br>
     <select id="description" name="description">
         <option value="null">בחר</option>
-        <option value="shaking">רעד</option>
-        <option value="hole">חור בזמן</option>
-        <option value="dino">מפגש עם דינוזאור</option>
+        <option value="רעד">רעד</option>
+        <option value="חור בזמן">חור בזמן</option>
+        <option value="מפגש עם דינוזאור">מפגש עם דינוזאור</option>
     </select><br>
 
 <!-- field 5 -->
     <label for="group">האם יותר מאדם אחד חצה?</label><br>
     <select id="group" name="group">
       <option value="null">בחר</option>
-      <option value="yes">כן</option>
-      <option value="no">לא</option>
+      <option value="כן">כן</option>
+      <option value="לא">לא</option>
     </select><br>
 
 
 
 <!-- field 6 -->
-     <label for="diagnosis">שדה אבטחה נוכחי:</label><br>
-    <input type="text" id="diagnosis" name="diagnosis" rows="3" cols="40"><br>
+     <label for="security">שדה אבטחה נוכחי:</label><br>
+    <input type="text" id="security" name="security" rows="3" cols="40"><br>
 
 <!-- field 7 -->
     <label for="email">* כתובת אימייל לדיווח חוזר:</label><br>

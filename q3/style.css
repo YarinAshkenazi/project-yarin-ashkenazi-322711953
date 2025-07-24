@@ -69,3 +69,12 @@
   color: maroon;
   border: 1px solid peachpuff;
 }
+
+    .report-card {
+      border: 1px solid whitesmoke;
+      padding: 10px;
+      margin: 10px auto;
+      max-width: 600px;
+      background-color: wheat;
+      border-radius: 5px;
+    }
