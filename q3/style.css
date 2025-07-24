@@ -49,3 +49,23 @@
       border-radius: 4px;
       cursor: pointer;
     }
+
+
+.form-message {
+  margin-top: 12px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.form-message.success {
+  background-color: lightgoldenrodyellow;
+  color: green;
+  border: 1px solid lime;
+}
+
+.form-message.error-message {
+  background-color: white;
+  color: maroon;
+  border: 1px solid peachpuff;
+}
