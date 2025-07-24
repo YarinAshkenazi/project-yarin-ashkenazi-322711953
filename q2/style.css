@@ -5,6 +5,7 @@ body {
   background-color: seashell;
 }
 
+
 header {
   text-align: center;
   background-color: maroon;
@@ -17,6 +18,7 @@ header {
   margin-bottom: 100px;
   font-size: 32px;
   font-weight: bold;
+  box-sizing: border-box; 
 }
 
 main{
