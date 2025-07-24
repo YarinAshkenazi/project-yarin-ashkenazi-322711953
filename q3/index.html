@@ -13,9 +13,19 @@
 <div class="page-container">
   <h2>טופס דיווח תקלה בתעלת זמן</h2>
 <form id="reportform">
-
-
-
+<label for="channel-number">* מספר תעלה:</label><br>
+<!-- btn 1 -->
+    <input type="number" placeholder="הכנס מספר תעלה" id="channel-number" name="channel-number">
+    <div id="channelError" class="error">אנא הזן מספר תעלה</div>
+    <br><br>
+<!-- btn 2 -->
+    <label for="target-time">* זמן יעד:</label><br>
+    <input type="datetime-local" id="target-time" name="target-time">
+    <div id="targetTimeError" class="error">אנא הזן זמן יעד</div>
+    <br><br>
+<!-- btn 3 -->
+<label for="landing-time">זמן נחיתה בפועל:</label><br>
+    <input type="datetime-local" id="landing-time" name="landing-time"><br><br>
 
 <button type="submit">שלח דיווח</button>  
 </form>

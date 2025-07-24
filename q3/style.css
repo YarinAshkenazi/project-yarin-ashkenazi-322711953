@@ -1,0 +1,26 @@
+.error {
+      color: red;
+      font-size: 14px;
+      display: none;
+    }
+
+    body {
+      font-family: Arial;
+      background-color: whitesmoke;
+      padding: 40px;
+      line-height: 1.6;
+    }
+
+    h2 {
+      text-align: center;
+      color: maroon;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background: wheat;
+      border: 2px solid grey;
+      border-radius: 8px;
+    }
