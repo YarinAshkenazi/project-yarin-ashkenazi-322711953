@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded", renderItems);
 
 
 function renderItems(filterValue = "all") {
-  const container = document.getElementById("reportsContainer");
+  const container = document.getElementById("reportscontainer");
   if (!container) return;
 
   container.innerHTML = "";
@@ -113,7 +113,7 @@ function renderItems(filterValue = "all") {
           <option value="טופלה" ${report.status === "טופלה" ? "selected" : ""}>טופלה</option>
         </select>
       </p>
-      <button onclick="deleteItem(${report.id})">🗑 מחק</button>
+      <button onclick="deleteItem(${report.id})">מחק</button>
     `;
     container.appendChild(card);
   });

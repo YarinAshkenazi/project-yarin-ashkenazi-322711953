@@ -79,7 +79,7 @@
   border: 1px solid peachpuff;
 }
 
-    .report-card {
+    .reportcard {
       border: 1px solid whitesmoke;
       padding: 10px;
       margin: 10px auto;
@@ -87,3 +87,34 @@
       background-color: wheat;
       border-radius: 5px;
     }
+
+
+    .reportsgrid {
+  display: grid;
+  grid-template-columns: repeat(3,  1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px;
+}
+
+.report-card {
+  background-color: wheat;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid whitesmoke;
+}
+
+
+
+@media (max-width: 900px) {
+  .reports-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .reports-grid {
+    grid-template-columns: 1fr;
+  }
+}
