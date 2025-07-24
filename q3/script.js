@@ -78,22 +78,27 @@ function saveItem(report) {
 
 window.addEventListener("DOMContentLoaded", renderItems);
 
-function renderItems() {
+
+
+function renderItems(filterValue = "all") {
   const container = document.getElementById("reportsContainer");
   if (!container) return;
 
   container.innerHTML = "";
   const reports = JSON.parse(localStorage.getItem("reports")) || [];
 
-  if (reports.length === 0) {
+  const filteredReports = filterValue === "all"
+    ? reports
+    : reports.filter(r => r.description === filterValue);
+
+  if (filteredReports.length === 0) {
     container.innerHTML = "<p>לא נמצאו דיווחים.</p>";
     return;
   }
 
-  reports.forEach(report => {
+  filteredReports.forEach(report => {
     const card = document.createElement("div");
     card.className = "report-card";
-
     card.innerHTML = `
       <p><strong>תעלה:</strong> ${report.channel}</p>
       <p><strong>זמן יעד:</strong> ${formatDateTime(report.targetTime)}</p>
@@ -108,12 +113,12 @@ function renderItems() {
           <option value="טופלה" ${report.status === "טופלה" ? "selected" : ""}>טופלה</option>
         </select>
       </p>
-      <button onclick="deleteItem(${report.id})">מחק</button>
+      <button onclick="deleteItem(${report.id})">🗑 מחק</button>
     `;
-
     container.appendChild(card);
   });
 }
+
 
 
 function formatDateTime(isoString) {
@@ -149,6 +154,15 @@ function updateItem(id, status) {
 
 
 
+window.addEventListener("DOMContentLoaded", () => {
+  renderItems();
 
+  const filter = document.getElementById("filter");
+  if (filter) {
+    filter.addEventListener("change", function () {
+      renderItems(this.value);
+    });
+  }
+});
 
 
