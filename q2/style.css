@@ -31,18 +31,75 @@ main{
   
 }
 
+
+
+
+
 .survival-card {
-  background-color: white;
   border: 1px solid blue;
   border-radius: 12px;
-  width: 280px;
-  padding: 24px;
-  position: relative;
+  padding: 20px;
+  margin: 32px auto;
+  max-width: 900px;
+  background-color: white;
+  direction: rtl;
 }
+
+.card-footer {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-text-section {
+  flex: 1;
+}
+
+.card-topic {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.card-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
+
 
 footer{
     background-color: maroon;
     color: seashell;
     text-align: center;
     padding: 16px;
+}
+
+
+
+@media (max-width: 768px) {
+  .card-content {
+    flex-direction: column;
+  }
+
+  .card-image {
+    width: 100%;
+  }
 }
