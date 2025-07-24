@@ -14,26 +14,53 @@
   <h2>טופס דיווח תקלה בתעלת זמן</h2>
 <form id="reportform">
 <label for="channel-number">* מספר תעלה:</label><br>
-<!-- btn 1 -->
+<!-- field 1 -->
     <input type="number" placeholder="הכנס מספר תעלה" id="channel-number" name="channel-number">
     <div id="channelError" class="error">אנא הזן מספר תעלה</div>
-    <br><br>
-<!-- btn 2 -->
+    <br>
+<!-- field 2 -->
     <label for="target-time">* זמן יעד:</label><br>
     <input type="datetime-local" id="target-time" name="target-time">
     <div id="targetTimeError" class="error">אנא הזן זמן יעד</div>
-    <br><br>
-<!-- btn 3 -->
+    <br>
+<!-- field 3 -->
 <label for="landing-time">זמן נחיתה בפועל:</label><br>
-    <input type="datetime-local" id="landing-time" name="landing-time"><br><br>
+    <input type="datetime-local" id="landing-time" name="landing-time"><br>
+<!-- field 4 -->
+    <label for="description">תיאור התקלה:</label><br>
+    <select id="description" name="description">
+        <option value="null">בחר</option>
+        <option value="shaking">רעד</option>
+        <option value="hole">חור בזמן</option>
+        <option value="dino">מפגש עם דינוזאור</option>
+    </select><br>
+
+<!-- field 5 -->
+    <label for="group">האם יותר מאדם אחד רצה?</label><br>
+    <select id="group" name="group">
+      <option value="null">בחר</option>
+      <option value="yes">כן</option>
+      <option value="no">לא</option>
+    </select><br>
+
+
+
+<!-- field 6 -->
+     <label for="diagnosis">שדה אבטחה נוכחי:</label><br>
+    <input type="text" id="diagnosis" name="diagnosis" rows="3" cols="40"><br>
+
+<!-- field 7 -->
+    <label for="email">* כתובת אימייל לדיווח חוזר:</label><br>
+    <input type="text" id="email" name="email" placeholder="me@example.com">
+    <div id="emailError" class="error">אנא הזן כתובת אימייל תקינה *</div>
+    <br><br>
+
+
 
 <button type="submit">שלח דיווח</button>  
 </form>
 
 
-
-
-  
 </div>
 </body>
 </html>
